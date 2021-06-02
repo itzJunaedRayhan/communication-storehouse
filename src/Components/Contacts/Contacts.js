@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { clearAllContact, selectAllContact, deleteAllContact } from '../../Redux/Actions/contactActions';
 import Contact from '../Contact/Contact';
 
@@ -9,9 +9,9 @@ const Contacts = () => {
     const contacts = useSelector(state => state.contacts.contacts);
     const selectedContacts = useSelector((state) => state.contacts.selectedContacts)
     useEffect(() => {
-        if(selectAll){
+        if (selectAll) {
             dispatch(selectAllContact(contacts.map(contact => contact.id)))
-        }else{
+        } else {
             dispatch(clearAllContact())
         }
     })
