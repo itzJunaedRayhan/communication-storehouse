@@ -7,6 +7,7 @@ import './styles/App.scss';
 import {Provider} from "react-redux";
 import { store } from './Redux/store/store';
 import AddContact from "./Components/AddContacts/AddContact";
+import EditContact from "./Components/EditContact/EditContact";
 function App() {
   return (
     <Provider store={store}>
@@ -21,6 +22,9 @@ function App() {
                 </Route>
                 <Route path="/contacts/add">
                   <AddContact/>
+                </Route>
+                <Route path="/contacts/edit/:id">
+                  <EditContact/>
                 </Route>
               </Switch>
             </div>
