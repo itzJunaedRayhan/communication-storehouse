@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import {deleteContact} from "../../Redux/Actions/contactActions";
 import {useDispatch} from "react-redux"
 
-const Contact = ({contact}) => {
+const Contact = ({contact, selectAll}) => {
     const dispatch = useDispatch()
     const {name, phone, email, id} = contact;
     return (
         <tr>
             <td>
             <div className="custom-control custom-checkbox">
-                <input type="checkbox" className="custom-control-input" />
+                <input checked={selectAll} type="checkbox" className="custom-control-input" />
                 <label className="custom-control-label"></label>
             </div>
             </td>
