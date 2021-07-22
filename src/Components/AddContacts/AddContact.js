@@ -43,5 +43,4 @@ const AddContact = () => {
         </div>
     );
 };
-
 export default AddContact;
